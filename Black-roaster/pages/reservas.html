@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---CSS-->
+        <link rel="stylesheet" href="../styles/style.css">
+        <title>Reservas - Black Roaster </title>
+    </head>
+
+    <body>
+     
+      <!--ENCABEZADO-->
+      <header>
+        <h1>BLACK ROASTER</h1>
+        <p>Reserva tu mesa y disfruta una experiencia única</p>
+      </header>
+
+      <!--MENÚ DE NAVEGACIÓN-->
+      <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/menu.html">Menú</a></li>
+            <li><a href="../pages/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="../pages/reservas.html">Reservas</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+        <!--CONTENIDO PRINCIPAL-->
+        <main>
+
+          <!--INFORMACIÓN-->
+          <section> 
+            <h2>Reserva tu mesa</h2>
+            <p> Completa el siguiente formulario para solicitar tu reserva. Nuestro equipo confirmará la disponibilidad lo antes posible.</p>
+          </section>
+
+          <!--HORARIOS-->
+            <section>
+              <h2>Horarios de Atención</h2>
+
+              <ul>
+                <li>Lunes a Jueves: 12:00 - 15:00 | 19:00 - 23:00</li>
+                <li>Viernes a Sábado: 12:00 - 16:00 | 19:00 - 00:00</li>
+                <li>Domingos: 12:00 - 17:00</li>
+             </ul>
+             </section>
+
+         <!--FORMULARIO-->
+             <section>
+            
+              <h2>Formulario de Reserva</h2>
+
+               <form action="#" method="post">
+                 <label for="nombre">Nombre y Apellido:</label><br>
+                 <input type="text" id="nombre" name="nombre" required>
+
+                 <br><br>
+
+                 <label for="email">Correo Electrónico:</label><br>
+                 <input type="email" id="email" name="email" required>
+
+                 <br><br>
+
+                 <label for="telefono">Teléfono:</label><br>
+                 <input type="tel" id="telefono" name="telefono" required>
+
+                 <br><br>
+
+                 <label for="fecha">Fecha:</label><br>
+                 <input type="date" id="fecha" name="fecha" required>
+
+                 <br><br>
+
+                 <label for="hora">Hora:</label><br>
+                 <input type="time" id="hora" name="hora" required>  
+
+                 <br><br>
+
+                 <label for="personas">Cantidad de Personas:</label><br>
+                 <select id="personas" name="personas" >
+                     <option>1 Persona</option>
+                     <option>2 Personas</option>
+                     <option>3 Personas</option>
+                     <option>4 Personas</option>
+                     <option>5 Personas</option>
+                     <option>6 Personas</option>
+                     <option>Más de 6 Personas</option>
+                 </select>
+
+                 <br><br>
+
+                 <label for="comentarios">Comentarios o solicitudes especiales:</label><br>
+                 <textarea id="comentarios"
+                          name="comentarios"
+                          rows="5"
+                          cols="40"
+                          placeholder="Escribe aquí cualquier información adicional...">
+                 </textarea>
+
+                 <br><br>
+
+                 <button type="submit">Enviar Reserva</button>
+
+                 </form>
+
+            </section>
+
+        </main>
+
+        <footer>
+             <p>© 2026 Black Roaster. Todos los derechos reservados.</p>
+         </footer>
+    
