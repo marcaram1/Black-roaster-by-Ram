@@ -1,5 +1,162 @@
-body {
-    background-color: #191919;
-    color: aliceblue;
+/*GOOGLE FONTS*/
 
- }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+  /*font-family: "Noto Sans", sans-serif;*/
+
+/*VARIABLES*/
+
+:root{
+
+    --color-primary: #121212;
+    --color-secondary: #1E1E1E;
+    --color-accent: #C8A45D;
+    --color-text: #F5F5F5;
+    --color-text-secondary: #C7C7C7;
+
+    --font-title: 'Playfair Display', serif;
+    --font-text: 'Poppins', sans-serif;
+
+}
+
+/*BODY*/
+
+body{
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-family: var(--font-text);
+    line-height: 1.6;
+}
+
+/*TIPOGRAFIA*/
+
+h1{
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+  
+}
+
+h2{
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--color-accent);
+  
+}
+
+p{
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+  
+}
+
+
+/* HEADER*/
+
+header{
+
+    background-color: var(--color-secondary);
+    text-align: center;
+
+}
+
+header img{
+
+    width: 180px;
+    margin-top: 20px;
+
+}
+
+/* NAV*/
+
+nav{
+
+    background-color: var(--color-primary);
+    text-align: center;
+
+}
+
+nav ul{
+
+    list-style: none;
+
+}
+
+nav li{
+
+    display: inline;
+
+}
+
+nav a{
+
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+
+}
+
+nav a:hover{
+
+    color: var(--color-accent);
+
+}
+
+/*MAIN*/
+
+main{
+
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+article{
+
+    background-color: var(--color-secondary);
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+}
+
+section{
+
+    background-color: var(--color-secondary);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+}
+
+section ul{
+
+    margin-left: 30px;
+    margin-top: 15px;
+
+}
+
+section li{
+
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+
+}
+
+
+/*FOOTER*/
+
+
+footer{
+
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid var(--color-accent);
+
+}
+
+/*RESPONSIVE/
