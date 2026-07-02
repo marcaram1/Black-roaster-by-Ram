@@ -17,7 +17,13 @@
     --font-text: 'Poppins', sans-serif;
 
 }
+/*RESET*/
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /*BODY*/
 
 body{
@@ -33,20 +39,21 @@ h1{
     font-family: var(--font-title);
     font-size: 2.5rem;
     color: var(--color-accent);
-  
+    letter-spacing: 3px;
 }
 
 h2{
     font-family: var(--font-title);
     font-size: 2rem;
     color: var(--color-accent);
+    margin-bottom: 20px;
   
 }
 
 p{
     font-size: 1rem;
     color: var(--color-text-secondary);
-  
+    margin-bottom: 15px;
 }
 
 
@@ -56,6 +63,7 @@ header{
 
     background-color: var(--color-secondary);
     text-align: center;
+    border-bottom: 2px solid var(--color-accent);
 
 }
 
@@ -70,14 +78,19 @@ header img{
 
 nav{
 
-    background-color: var(--color-primary);
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 20px 40px;
 
 }
 
 nav ul{
 
+    display: flex;
     list-style: none;
+    gap: 30px;
 
 }
 
@@ -95,10 +108,8 @@ nav a{
 
 }
 
-nav a:hover{
-
-    color: var(--color-accent);
-
+nav img{
+    width: 120px;
 }
 
 /*MAIN*/
@@ -106,9 +117,7 @@ nav a:hover{
 main{
 
     width: 80%;
-    margin: auto;
-    padding: 20px;
-
+    margin: 40px auto;
 }
 
 article{
@@ -123,6 +132,9 @@ article{
 
 section{
 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: var(--color-secondary);
     padding: 25px;
     margin-bottom: 30px;
@@ -156,7 +168,6 @@ footer{
     padding: 20px;
     margin-top: 40px;
     border-top: 2px solid var(--color-accent);
-
+    border-bottom: 2px solid var(--color-accent);
 }
 
-/*RESPONSIVE/
