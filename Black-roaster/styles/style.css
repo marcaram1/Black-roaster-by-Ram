@@ -1,4 +1,12 @@
-/*GOOGLE FONTS*/
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GOOGLE-FONTS*/
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
   /*font-family: "Noto Sans", sans-serif;*/
@@ -17,13 +25,7 @@
     --font-text: 'Poppins', sans-serif;
 
 }
-/*RESET*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 /*BODY*/
 
 body{
@@ -31,6 +33,7 @@ body{
     color: var(--color-text);
     font-family: var(--font-text);
     line-height: 1.6;
+    margin: 0 16px;
 }
 
 /*TIPOGRAFIA*/
@@ -56,14 +59,13 @@ p{
     margin-bottom: 15px;
 }
 
+/*HEADER*/
 
-/* HEADER*/
+.header{
 
-header{
-
-    background-color: var(--color-secondary);
+    /*background-color: var(--color-secondary);*/ 
     text-align: center;
-    border-bottom: 2px solid var(--color-accent);
+    /*border-bottom: 2px solid var(--color-accent);*/
 
 }
 
@@ -74,14 +76,15 @@ header img{
 
 }
 
-/* NAV*/
+/*NAVBAR*/
 
-nav{
+.navbar{
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: var(--color-secondary);
+    border-radius: 10px;
     padding: 20px 40px;
 
 }
@@ -94,12 +97,6 @@ nav ul{
 
 }
 
-nav li{
-
-    display: inline;
-
-}
-
 nav a{
 
     text-decoration: none;
@@ -108,58 +105,146 @@ nav a{
 
 }
 
-nav img{
-    width: 120px;
-}
-
-/*MAIN*/
+/*MAIN
 
 main{
 
     width: 80%;
-    margin: 40px auto;
-}
+    margin: 16px 16px;
+}*/
 
-article{
+/*GRID-PRESENTATION*/
 
-    background-color: var(--color-secondary);
-    padding: 25px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-
-}
-
-section{
-
-    display: flex;
-    flex-direction: column;
+.presentation{
+    display:grid;
+    grid-template-areas:
+    "title"
+    "text-one"
+    "text-two"
+    "text-three";
     gap: 20px;
-    background-color: var(--color-secondary);
+    background-color:var(--color-secondary);
     padding: 25px;
-    margin-bottom: 30px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     border-radius: 10px;
 
 }
 
-section ul{
+.presentation-title{
 
-    margin-left: 30px;
-    margin-top: 15px;
-
-}
-
-section li{
-
-    margin-bottom: 12px;
-    color: var(--color-text-secondary);
+    grid-area: title;
 
 }
 
+.text-one{
+
+    grid-area: text-one;
+
+}
+
+.text-two{
+
+    grid-area: text-two;
+
+}
+
+.text-three{
+
+    grid-area: text-three;
+
+}
+
+/*GRID-BENFITS*/
+.benefits-grid{
+
+    display:grid;
+    grid-template-areas:
+    "benefits"
+    "card-one"
+    "card-two"
+    "card-three"
+    "card-four";
+    gap: 20px;
+    background-color:var(--color-secondary);
+    padding: 25px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+}
+
+.benefits{
+
+    grid-area: benefits;
+
+}
+
+.card-one{
+
+    grid-area: card-one;
+
+}
+
+.card-two{
+
+    grid-area: card-two;
+
+}
+
+.card-three{
+
+    grid-area: card-three;
+
+}
+
+.card-four{
+
+    grid-area: card-four;
+
+}
+/*GRID-CARD*/
+.card{
+
+    background-color:var(--color-primary);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+/*GIRD-MENU*/
+.menu-grid{
+
+    display:grid;
+    grid-template-areas:
+    "entradas"
+    "principales"
+    "postres";
+    gap: 25px;
+    background-color:var(--color-secondary);
+    padding: 25px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+}
+
+.entradas{
+
+    grid-area: entradas;
+
+}
+
+.principales{
+
+    grid-area: principales;
+
+}
+
+.postres{
+
+    grid-area: postres;
+
+}
 
 /*FOOTER*/
-
-
 footer{
 
     background-color: var(--color-secondary);
@@ -171,3 +256,47 @@ footer{
     border-bottom: 2px solid var(--color-accent);
 }
 
+/*MEDIA-QUERIES*/
+
+/*TABLET*/
+@media(min-width:768px){
+
+    .benefits-grid{
+        grid-template-areas: 
+        "benefits benefits"
+        "card-one card-two"
+        "card-three card-four";
+        grid-template-rows:repeat(3, 1fr);
+        grid-template-columns:(2, 1fr);
+
+    }
+
+    .menu-grid{
+        grid-template-areas:
+        "entradas principales"
+        "postres postres";
+        grid-template-columns:repeat(2,1fr);
+        
+    }
+
+}
+
+/*DESKTOP*/
+
+@media(min-width:1024px){
+
+    .benefits-grid{
+        grid-template-areas: 
+        "benefits card-one card-three"
+        "benefits card-two card-four";
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows:repeat(2, 1fr);
+    }
+
+    .menu-grid{
+        grid-template-areas:
+        "entradas principales postres";
+        grid-template-columns:repeat(3,1fr);
+        
+    }
+ }
